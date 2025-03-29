@@ -120,7 +120,7 @@ app.post('/api/ragie/init', async (req, res) => {
   try {
     const response = await axios.post('https://api.ragie.ai/connections/oauth', {
       source_type: "google_drive",
-      redirect_uri: `${process.env.APP_URL}/ragie-callback`,
+      redirect_uri: `${process.env.FRONTEND_URL}/ragie-callback`,
       metadata: {
         user_id: req.body.userId
       },
